@@ -1,0 +1,27 @@
+{
+  "name": "projection",
+  "version": "1.0.0",
+  "description": "A nodejs package for movie showtimes around the globe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anault/projection.git"
+  },
+  "keywords": [
+    "projection",
+    "cinema",
+    "showtimes",
+    "movie",
+    "api",
+    "scraper"
+  ],
+  "author": "anault",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anault/projection/issues"
+  },
+  "homepage": "https://github.com/anault/projection"
+}
