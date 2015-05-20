@@ -1,8 +1,8 @@
 # Projection
 Movie showtimes around the globe.
 
-[![Build Status](https://travis-ci.org/anault/projection.svg?branch=master)](https://travis-ci.org/anault/projection)
-[![Coverage Status](http://coveralls.io/repos/anault/projection/badge.png)](http://coveralls.io/r/anault/projection)
+[![Build Status](https://img.shields.io/travis/anault/projection.svg?style=flat-square)](https://travis-ci.org/anault/projection)
+[![Coverage Status](https://img.shields.io/coveralls/anault/projection.svg?style=flat-square)](https://coveralls.io/r/anault/projection)
 
 <!---
 ## Installation
