@@ -1,6 +1,6 @@
 'use strict';
 
-var assert = require("assert")
+var assert = require('assert')
 var Projection = require('../lib/projection');
 
 var p; // Projection
@@ -19,13 +19,13 @@ describe('Projection', function(){
 	describe('new Projection()', function(){
     it('should have the corresponding endpoint', function(){
     	p = new Projection();
-    	assert.equal(p.GOOGLE_ENDPOINT, "http://www.google.com/movies");
+    	assert.equal(p.GOOGLE_ENDPOINT, 'http://www.google.com/movies');
     })
   })
 
   describe('#findTheaters()', function(){
     it('should find theaters by town', function(done){
-			p.findTheaters("Montreal", function(err, theaters) {
+			p.findTheaters('Montreal', function(err, theaters) {
 				//console.log(theaters);
 
 				assert.equal(err, null);
@@ -37,30 +37,30 @@ describe('Projection', function(){
     })
 
     it('should find theaters by zipcode', function(done){
-    	p.findTheaters("Montreal", function(err, theaters) {
+    	p.findTheaters('Montreal', function(err, theaters) {
 				assert.equal(err, null);
 				done();
 			});
     })
 
     it('should find theaters by lat/long', function(done){
-    	p.findTheaters("Montreal", function(err, theaters) {
+    	p.findTheaters('Montreal', function(err, theaters) {
 				assert.equal(err, null);
 				done();
 			});
     })
 
     it('should return requestjs error', function(done){
-    	p.GOOGLE_ENDPOINT = "abc" // Override endpoint
-    	p.findTheaters("Montreal", function(err, theaters) {
-				assert.equal(err, "Error: Invalid URI \"abc?near=Montreal\"");
+    	p.GOOGLE_ENDPOINT = 'abc'; // Override endpoint
+    	p.findTheaters('Montreal', function(err, theaters) {
+				assert.equal(err, 'Error: Invalid URI "abc?near=Montreal"');
 				done();
 			});
     })
 
     it('should return a 404 error', function(done){
-    	p.GOOGLE_ENDPOINT = "http://httpstat.us/404" // Override endpoint
-    	p.findTheaters("Montreal", function(err, theaters) {
+    	p.GOOGLE_ENDPOINT = 'http://httpstat.us/404' // Override endpoint
+    	p.findTheaters('Montreal', function(err, theaters) {
 				assert.equal(err, 404);
 				done();
 			});

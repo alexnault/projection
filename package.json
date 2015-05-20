@@ -1,10 +1,10 @@
 {
   "name": "projection",
-  "version": "1.0.0",
-  "description": "A nodejs package for movie showtimes around the globe",
+  "version": "0.1.0",
+  "description": "Fast acquisition of movie showtimes around the globe",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./test/**.js",
+    "test": "mocha ./test/*.js",
     "test-travis": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*.js"
   },
   "repository": {
