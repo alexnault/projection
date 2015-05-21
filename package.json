@@ -21,8 +21,10 @@
   ],
   "author": "anault",
   "dependencies": {
+    "cheerio": "0.19.0",
+    "query-string": "^2.1.0",
     "request": "2.55.0",
-    "cheerio": "0.19.0"
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "coveralls": "^2.11.2",
