@@ -5,12 +5,9 @@ Movie showtimes around the globe.
 [![Coverage Status](https://img.shields.io/coveralls/anault/projection.svg?style=flat-square)](https://coveralls.io/r/anault/projection)
 
 ## Installation
-Coming soon!
-<!--
 ```bash
-npm install projection
+npm install projection --save
 ```
--->
 
 ## Quickstart
 ```javascript
@@ -26,7 +23,7 @@ p.findMovie('Montreal', 'Mad Max', {}, function(err, movie) {
 });
 ```
 
-##How it works
+## How it works
 #### projection.findTheaters(near, options, callback);
 Returns an array of theaters (and their showtimes) following this structure:
 ```javascript
@@ -71,10 +68,10 @@ Returns the movie and its showtimes in the nearest theaters following this struc
 }
 ```
 
-##Features
+## Features
 - Multi-lang support
 - Caching of repeated calls
 - More to come...
 
-##Wanna help?
+## Wanna help?
 Any contribution is welcomed!
