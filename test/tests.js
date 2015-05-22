@@ -65,6 +65,21 @@ describe('Projection', function(){
 				done();
 			});
     })
+
+    it('should return theaters more quickly the second time', function(done){
+      var start = new Date().getTime();
+
+      p.findTheaters('Montreal', {}, function(err, theaters) {
+        var t1 = new Date().getTime() - start;
+        start = new Date().getTime();
+        p.findTheaters('Montreal', {}, function(err, theaters) {
+          var t2 = new Date().getTime() - start;
+          assert(t1 >= t2); // ~500ms to ~10ms
+          assert(t2 < 100); // Expect cache to take lesser than 100ms
+          done();
+        });
+      });
+    })
   })
 
 // Expected JSON format
@@ -95,6 +110,21 @@ describe('Projection', function(){
 				assert.equal(err, 404);
 				done();
 			});
+    })
+
+    it('should return a movie more quickly the second time', function(done){
+      var start = new Date().getTime();
+
+      p.findMovie('Montreal', 'Mad Max', {}, function(err, theaters) {
+        var t1 = new Date().getTime() - start;
+        start = new Date().getTime();
+        p.findMovie('Montreal', 'Mad Max', {}, function(err, theaters) {
+          var t2 = new Date().getTime() - start;
+          assert(t1 >= t2); // ~500ms to ~10ms
+          assert(t2 < 100); // Expect cache to take lesser than 100ms
+          done();
+        });
+      });
     })
   })
 })
