@@ -21,7 +21,9 @@
   ],
   "author": "anault",
   "dependencies": {
+    "charset": "^1.0.0",
     "cheerio": "0.19.0",
+    "iconv-lite": "^0.4.9",
     "query-string": "^2.1.0",
     "request": "2.55.0",
     "underscore": "^1.8.3"
