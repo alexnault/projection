@@ -52,5 +52,14 @@ describe('Cache', function(){
       assert.equal(c._hash['key'], v2);
     })
   })
+
+  describe('#clear()', function(){
+    it('should empty the cache', function(){
+      c._hash['key'] = 123;
+      assert.equal(c._hash['key'], 123);
+      c.clear();
+      assert.equal(c._hash['key'], undefined);
+    })
+  })
 })
 
