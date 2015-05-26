@@ -1,7 +1,7 @@
 'use strict';
 
 var assert = require('assert')
-var Projection = require('../lib/projection');
+var projection = require('../lib/projection');
 
 var p; // Projection
 
@@ -13,12 +13,11 @@ var p; // Projection
 
 describe('Projection', function(){
 	beforeEach(function(){
-	  p = new Projection();
+	  p = projection();
 	})
 
 	describe('new Projection()', function(){
     it('should have the corresponding endpoint', function(){
-    	p = new Projection();
     	assert.equal(p.GOOGLE_ENDPOINT, 'http://www.google.com/movies');
     })
   })

@@ -1,3 +1,3 @@
 'use strict';
 
-require('./lib/projection');
+module.exports = require('./lib/projection');

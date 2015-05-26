@@ -13,8 +13,8 @@ npm install projection --save
 
 ## Quickstart
 ```javascript
-var Projection = require('projection');
-var p = new Projection();
+var projection = require('projection');
+var p = projection();
 
 p.findTheaters('Montreal', {}, function(err, theaters) {
  	console.log(theaters);
