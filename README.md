@@ -17,7 +17,7 @@ var projection = require('projection');
 var p = projection();
 
 p.findTheaters('Montreal', {}, function(err, theaters) {
- 	console.log(theaters);
+  console.log(theaters);
 });
 
 p.findMovie('Montreal', 'Mad Max', {}, function(err, movie) {
@@ -43,7 +43,7 @@ Returns an array of theaters (and their showtimes) following this structure:
       trailer: 'http://www.youtube.com/watch...',
       showtimes:[ '18:00', '20:15' ]
     },
-    // Other movies...
+    // Other movies in this theater...
   ]
 }
 ```
@@ -51,21 +51,21 @@ Returns an array of theaters (and their showtimes) following this structure:
 Returns the movie and its showtimes in the nearest theaters following this structure:
 ```javascript
 {  
-  title:'Mad Max: Fury Road',
-  desc:'Haunted by his turbulent past, Mad Max believes[...]',
-  director:'George Miller',
-  cast:[ 'Charlize Theron', 'Tom Hardy' ],
-  duration:'2hr 0min',
-  rating:'Rated 13+',
-  genre:'Action/Adventure/Scifi/Fantasy',
-  trailer:'http://www.youtube.com/watch[...]',
-  theaters:[  
+  title: 'Mad Max: Fury Road',
+  desc: 'Haunted by his turbulent past, Mad Max believes[...]',
+  director: 'George Miller',
+  cast: [ 'Charlize Theron', 'Tom Hardy' ],
+  duration: '2hr 0min',
+  rating: 'Rated 13+',
+  genre: 'Action/Adventure/Scifi/Fantasy',
+  trailer: 'http://www.youtube.com/watch[...]',
+  theaters: [  
     {  
-      name:'Scotiabank Theatre Montreal',
-      address:'977 rue Sainte-Catherine Ouest, Montreal, QC, Canada',
-      showtimes:[ '19:50', '22:15' ]
+      name: 'Scotiabank Theatre Montreal',
+      address: '977 rue Sainte-Catherine Ouest, Montreal, QC, Canada',
+      showtimes: [ '19:50', '22:15' ]
     },
-    // More theaters...
+    // Other theaters with this movie...
   ]
 }
 ```
