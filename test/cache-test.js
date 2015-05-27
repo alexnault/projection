@@ -14,7 +14,7 @@ describe('Cache', function(){
   describe('new Cache()', function(){
     it('should have the appropriate values', function(){
       c = new Cache(10);
-      assert.equal(c._hash.length, 0);
+      assert.deepEqual(c._hash, {});
       assert.equal(c.capacity, 10);
     })
   })
