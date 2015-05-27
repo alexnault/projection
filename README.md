@@ -11,7 +11,7 @@ Movie showtimes around the globe.
 npm install projection --save
 ```
 
-## Quickstart
+## Example
 ```javascript
 var projection = require('projection');
 var p = projection();
@@ -25,7 +25,7 @@ p.findMovie('Montreal', 'Mad Max', {}, function(err, movie) {
 });
 ```
 
-## How it works
+## How to use
 #### projection.findTheaters(near, options, callback);
 Returns an array of theaters (and their showtimes) following this structure:
 ```javascript
