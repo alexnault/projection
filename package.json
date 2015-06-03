@@ -1,6 +1,6 @@
 {
   "name": "projection",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Fast acquisition of movie showtimes around the globe",
   "main": "index.js",
   "scripts": {
