@@ -27,6 +27,11 @@ p.findMovie('Montreal', 'Mad Max', {}, function(err, movie) {
 
 ## How to use
 #### projection.findTheaters(near, options, callback);
+- **near** - Either a city or a lat/long. ex.: 'Montreal' or '45.3838,-71.8958'
+- **options**
+  - **lang** - Select langage (default = 'en')
+  - **date** - Select date (0, 1, 2, etc.) (default = 0 ie. today)
+- **callback** - Function using the results
 Returns an array of theaters (and their showtimes) following this structure:
 ```javascript
 {  
@@ -47,7 +52,13 @@ Returns an array of theaters (and their showtimes) following this structure:
   ]
 }
 ```
-#### projection.findMovie(near, movieName, options, callback);
+#### projection.findMovie(near, movie, options, callback);
+- **near** - Either a city or a lat/long. ex.: 'Montreal' or '45.3838,-71.8958'
+- **movie** - A movie name. ex.: 'Mad Max'
+- **options**
+  - **lang** - Select langage (default = 'en')
+  - **date** - Select date (0, 1, 2, etc.) (default = 0 ie. today)
+- **callback** - Function using the results
 Returns the movie and its showtimes in the nearest theaters following this structure:
 ```javascript
 {  
