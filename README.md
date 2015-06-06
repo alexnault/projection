@@ -32,6 +32,7 @@ p.findMovie('Montreal', 'Mad Max', {}, function(err, movie) {
   - **lang** - Select langage (default = 'en')
   - **date** - Select date (0, 1, 2, etc.) (default = 0 ie. today)
 - **callback** - Function using the results
+
 Returns an array of theaters (and their showtimes) following this structure:
 ```javascript
 {  
@@ -59,6 +60,7 @@ Returns an array of theaters (and their showtimes) following this structure:
   - **lang** - Select langage (default = 'en')
   - **date** - Select date (0, 1, 2, etc.) (default = 0 ie. today)
 - **callback** - Function using the results
+
 Returns the movie and its showtimes in the nearest theaters following this structure:
 ```javascript
 {  
