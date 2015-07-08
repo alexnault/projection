@@ -20,6 +20,7 @@ describe('Projection', function() {
         assert.equal(err, null);
         assert(theaters.length > 0);
         assert(theaters[0].name);
+        assert(theaters[1].movies[0].imdbId.substring(0, 2), 'tt');
         // TODO test returned content
         done();
       });
@@ -75,7 +76,7 @@ describe('Projection', function() {
 
   describe('.findMovie()', function() {
     it('should find a movie\'s showtimes by town', function(done){
-      p.findMovie('Sherbrooke', 'Mad Max', {}, function(err, movie){
+      p.findMovie('Sherbrooke', 'Ted 2', {}, function(err, movie){
         assert.equal(err, null);
         assert(movie);
         assert(movie.theaters.length > 0);
@@ -86,7 +87,7 @@ describe('Projection', function() {
     })
 
     it('should find a movie\'s showtimes by lat/long', function(done){
-      p.findMovie('45.3838273,-71.8958539', 'Mad Max', {}, function(err, movie){
+      p.findMovie('45.3838273,-71.8958539', 'Ted 2', {}, function(err, movie){
         assert.equal(err, null);
         assert(movie);
         assert(movie.theaters.length > 0);
