@@ -59,6 +59,13 @@ describe('Projection', function() {
       });
     })
 
+    it('should return an error if no theaters are found', function(done) {
+      p.findTheaters('Innexistant Place', {}, function(err, theaters) {
+        assert.notEqual(err, null);
+        done();
+      });
+    })
+
     it('should return theaters more quickly the second time', function(done) {
       var start = new Date().getTime();
       p.findTheaters('Montreal', {}, function(err, theaters) {
@@ -76,7 +83,7 @@ describe('Projection', function() {
 
   describe('.findMovie()', function() {
     it('should find a movie\'s showtimes by town', function(done){
-      p.findMovie('Sherbrooke', 'Ted 2', {}, function(err, movie){
+      p.findMovie('Sherbrooke', 'Captain America: Civil War', {}, function(err, movie){
         assert.equal(err, null);
         assert(movie);
         assert(movie.theaters.length > 0);
@@ -87,7 +94,7 @@ describe('Projection', function() {
     })
 
     it('should find a movie\'s showtimes by lat/long', function(done){
-      p.findMovie('45.3838273,-71.8958539', 'Ted 2', {}, function(err, movie){
+      p.findMovie('45.3838273,-71.8958539', 'Captain America: Civil War', {}, function(err, movie){
         assert.equal(err, null);
         assert(movie);
         assert(movie.theaters.length > 0);
@@ -120,12 +127,19 @@ describe('Projection', function() {
       });
     })
 
+    it('should return an error if the movie is not found', function(done) {
+      p.findMovie('Montreal', 'Random movie name that does not exist', {}, function(err, theaters) {
+        assert.notEqual(err, null);
+        done();
+      });
+    })
+
     it('should return a movie more quickly the second time', function(done) {
       var start = new Date().getTime();
-      p.findMovie('Montreal', 'Mad Max', {}, function(err, theaters) {
+      p.findMovie('Montreal', 'Captain America: Civil War', {}, function(err, theaters) {
         var t1 = new Date().getTime() - start;
         start = new Date().getTime();
-        p.findMovie('Montreal', 'Mad Max', {}, function(err, theaters) {
+        p.findMovie('Montreal', 'Captain America: Civil War', {}, function(err, theaters) {
           var t2 = new Date().getTime() - start;
           assert(t1 >= t2); // ~500ms to ~10ms
           assert(t2 < 100); // Expect cache to take lesser than 100ms
