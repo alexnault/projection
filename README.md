@@ -8,7 +8,7 @@ Movie showtimes around the globe.
 
 ## Installation
 ```bash
-npm install projection --save
+yarn install projection --save
 ```
 
 ## Example
