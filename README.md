@@ -1,3 +1,5 @@
+*This project is obsolete since Google doesn't support the pages this projet relyied on anymore.*
+
 # Projection
 Movie showtimes around the globe.
 
